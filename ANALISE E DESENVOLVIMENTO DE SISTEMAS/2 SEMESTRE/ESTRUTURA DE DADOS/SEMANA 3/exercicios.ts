@@ -57,6 +57,22 @@ class Arvore {
       this.emOrdem(raiz.direita)
     }
   }
+
+  preOrdem(raiz: No | null) {
+    if (raiz) {
+      console.log(raiz.valor)
+      this.preOrdem(raiz.esquerda)
+      this.preOrdem(raiz.direita)
+    }
+  }
+
+  posOrdem(raiz: No | null) {
+    if (raiz) {
+      this.posOrdem(raiz.esquerda)
+      this.posOrdem(raiz.direita)
+      console.log(raiz.valor)
+    }
+  }
 }
 
 const arvoreBinaria = new Arvore()
